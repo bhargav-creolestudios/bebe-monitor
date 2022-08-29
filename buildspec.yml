@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm config set strict-ssl false -g
+  pre_build:
+    commands:
+      - echo NODE JS version
+      - node -v
+      - echo Installing dependencies...
+      - npm install
+  build:
+    commands:
+      - ls
+      - echo Building...
+      - npm run build
+artifacts:
+  files:
+    - Procfile
+    - package.json
+    - package-lock.json
+    - 'dist/**/*'
+    - 'node_modules/**/*'
+    - README.md
+  discard-paths: no
+  base-directory: './'
