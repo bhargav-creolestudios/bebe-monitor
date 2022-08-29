@@ -26,6 +26,7 @@ export class MailService {
       });
 
       const currentDateTimeInUTC = moment.utc().format();
+      //   response
       return {
         opt: otpNumber,
         current_date_time_utc: currentDateTimeInUTC,
