@@ -13,23 +13,23 @@ export class MailService {
         digits: true,
         lowerCaseAlphabets: false,
         upperCaseAlphabets: false,
-        specialChars: false,
+        specialChars: false
       });
       await this.mailerService.sendMail({
         from: 'bebe@creole.tech',
         to: email,
         subject: 'OTP',
-        template: './otp-content',
+        template: 'otp-content',
         context: {
-          OTP: otpNumber,
-        },
+          OTP: otpNumber
+        }
       });
 
       const currentDateTimeInUTC = moment.utc().format();
       //   response
       return {
         opt: otpNumber,
-        current_date_time_utc: currentDateTimeInUTC,
+        current_date_time_utc: currentDateTimeInUTC
       };
     } catch (error) {
       return { message: error.message };
