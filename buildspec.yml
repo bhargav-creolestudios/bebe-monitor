@@ -19,6 +19,7 @@ artifacts:
   files:
     - Procfile
     - package.json
+    - .npmrc
     - package-lock.json
     - 'dist/**/*'
     - 'node_modules/**/*'
