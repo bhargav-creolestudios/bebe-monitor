@@ -17,14 +17,14 @@ export class AppService {
     at.addGrant({
       roomJoin: true,
       room: roomName,
-      canPublish: true,
-      canSubscribe: true,
-      roomCreate: true,
-      roomList: true,
-      roomAdmin: true,
-      roomRecord: true,
-      canPublishData: true,
-      recorder: true
+      // canPublish: true,
+      // canSubscribe: true,
+      // roomCreate: true,
+      // roomList: true,
+      // roomAdmin: true,
+      // roomRecord: true,
+      // canPublishData: true,
+      // recorder: true
     });
     return at.toJwt();
   }
